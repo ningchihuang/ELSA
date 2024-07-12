@@ -48,6 +48,7 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch \
 ```
 
 - You can download trained supernet weight from links below:
+
 | Model           | Download | 
 |-----------------|----------|
 | ELSA-DeiT-S-N:4 | [no_eps](https://drive.google.com/file/d/1-76rgS2xA2dHTCWHascRaVoV2LEzRami/view)/[eps](https://drive.google.com/file/d/1XTjraDO7U-j80ZwnfashO3bZe3gsYw5x/view) |
