@@ -22,8 +22,7 @@ main.py --cfg configs/sparse/deit_small_vanilla.yaml \
 |------------------|------------------|----------------|----------|
 | DeiT-S           | Dense            | 4.7G           | 79.824%  |
 | ELSA-DeiT-S-2:4  | Uniform 2:4      | 2.5G (1.00×)   | 79.144%(no_eps)/78.654%(eps)  | 
-<!-- | ELSA-DeiT-S-N:4  | Layer-wise N:4   | 2.2G (1.14×)   | 79.0%  | -->
-|                  |                  | 2.0G (1.25×)   | 78.340%  |
+| ELSA-DeiT-S-N:4  | Layer-wise N:4   | 2.0G (1.25×)   | 78.340%  |
 | DeiT-B           | Dense            | 17.6G          | 81.806%  |
 | ELSA-DeiT-B-2:4  | Uniform 2:4      | 9.2G (1.00×)   | 81.668%  |
 | ELSA-DeiT-B-N:4  | Layer-wise N:4   | 6.9G (1.30×)   | 81.538%  |
