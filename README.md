@@ -20,21 +20,21 @@ main.py --cfg configs/sparse/deit_small_vanilla.yaml \
 ## Experimental Results
 | Model            | Sparsity Pattern | FLOPs          | Accuracy |
 |------------------|------------------|----------------|----------|
-| DeiT-S           | Dense            | 4.7G           | 79.824%  |
-| ELSA-DeiT-S-2:4  | Uniform 2:4      | 2.5G (1.00×)   | 79.144%(no_eps)/78.654%(eps)  | 
-| ELSA-DeiT-S-N:4  | Layer-wise N:4   | 2.0G (1.25×)   | 78.340%  |
-| DeiT-B           | Dense            | 17.6G          | 81.806%  |
-| ELSA-DeiT-B-2:4  | Uniform 2:4      | 9.2G (1.00×)   | 81.668%  |
-| ELSA-DeiT-B-N:4  | Layer-wise N:4   | 6.9G (1.30×)   | 81.538%  |
-|                  |                  | 6.0G (1.53×)   | 81.358%  |
-| Swin-S           | Dense            | 8.7G           | 83.170%  |
-| ELSA-Swin-S-2:4  | Uniform 2:4      | 4.6G (1.00×)   | 82.814%  |
-| ELSA-Swin-S-N:4  | Layer-wise N:4   | 4.0G (1.15×)   | 82.760%  |
-|                  |                  | 3.5G (1.31×)   | 82.536%  |
-| Swin-B           | Dense            | 15.4G          | 83.416%  |
-| ELSA-Swin-B-2:4  | Uniform 2:4      | 8.0G (1.00×)   | 83.124%  | 
-| ELSA-Swin-B-N:4  | Layer-wise N:4   | 5.9G (1.33×)   | 82.982%  |
-|                  |                  | 5.3G (1.51×)   | 82.794%  |
+| DeiT-S           | Dense            | 4.7G           | 79.824  |
+| ELSA-DeiT-S-2:4  | Uniform 2:4      | 2.5G (1.00×)   | 79.144(no_eps)/78.654(eps)  | 
+| ELSA-DeiT-S-N:4  | Layer-wise N:4   | 2.0G (1.25×)   | 78.340  |
+| DeiT-B           | Dense            | 17.6G          | 81.806  |
+| ELSA-DeiT-B-2:4  | Uniform 2:4      | 9.2G (1.00×)   | 81.668  |
+| ELSA-DeiT-B-N:4  | Layer-wise N:4   | 6.9G (1.30×)   | 81.538  |
+|                  |                  | 6.0G (1.53×)   | 81.358  |
+| Swin-S           | Dense            | 8.7G           | 83.170  |
+| ELSA-Swin-S-2:4  | Uniform 2:4      | 4.6G (1.00×)   | 82.814  |
+| ELSA-Swin-S-N:4  | Layer-wise N:4   | 4.0G (1.15×)   | 82.760  |
+|                  |                  | 3.5G (1.31×)   | 82.536  |
+| Swin-B           | Dense            | 15.4G          | 83.416  |
+| ELSA-Swin-B-2:4  | Uniform 2:4      | 8.0G (1.00×)   | 83.124  | 
+| ELSA-Swin-B-N:4  | Layer-wise N:4   | 5.9G (1.33×)   | 82.982  |
+|                  |                  | 5.3G (1.51×)   | 82.794  |
 
 - You can reproduce the results using the config and weights provided (all included in scripts.sh). Below is an example:
 ```
