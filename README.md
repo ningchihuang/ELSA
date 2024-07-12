@@ -1,5 +1,5 @@
 ## Introduction
-This is the new codebase for ELSA forked from TinyViT.
+This is the codebase for ELSA forked from TinyViT.
 
 ## Pending List
 - [ ] Environmental requirements
