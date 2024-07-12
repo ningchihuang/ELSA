@@ -63,7 +63,7 @@ def main(args, config):
     logger.info(f"Creating model:{config.MODEL.TYPE}/{config.MODEL.NAME}")
     model = build_model(config)
     
-    model.set_sampler_info(config.NAS.SEARCH_SPACE, True)
+    model.set_sampler_info(config.NAS.SEARCH_SPACE)
     logger.info("Register search space")
     logger.info(f"*FLOPs of largest subnetworks: {model.max_flops}")
     logger.info(f"*FLOPs of smallest subnetworks: {model.min_flops}")
