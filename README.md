@@ -47,6 +47,7 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch \
 --eval
 ```
 
+## SuperNet Weights
 - You can download trained supernet weight from links below:
 
 | Model           | Download | 
