@@ -36,7 +36,7 @@ main.py --cfg configs/sparse/deit_small_vanilla.yaml \
 | ELSA-Swin-B-N:4  | Layer-wise N:4   | 5.9G (1.33×)   | 82.982  |
 |                  |                  | 5.3G (1.51×)   | 82.794  |
 
-- You can reproduce the results using the config and weights provided (all included in scripts.sh). Below is an example:
+- You can reproduce the results using the config and weights provided (all included in `scripts.sh`). Below is an example:
 ```
 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch \
 --nproc_per_node 1 --master_port 29501 main.py \
