@@ -184,6 +184,7 @@ def main(args, config):
         print(
             f"local rank {config.LOCAL_RANK} / global rank {dist.get_rank()} successfully build proxy tensor with shape:{proxy_samples.shape}")
     else:
+        data_loader_proxy = data_loader_val  # Use validation loader when proxy is disabled
         proxy_samples = None
         proxy_targets = None    
     
@@ -292,7 +293,9 @@ def update_choices_weights(config, model, data_loader_val, current_epoch, eps5 =
     subnets = []
     for subnet_i in range(num_subnets):
         eps3_1 = epsilon3_1_scheduler.get_epsilon(subnet_i)
-        cfg = model.module.random_config_fn(weighted_mode = eps3_1, filter_ratio = 0.0, filter_threshold = eps5, confident_num_visit = eps5_v_num)
+        # FIXME: Work around for supernet training
+        # cfg = model.module.random_config_fn(weighted_mode = eps3_1, filter_ratio = 0.0, filter_threshold = eps5, confident_num_visit = eps5_v_num)
+        cfg = model.module.random_config_fn(weighted_mode = eps3_1)
         subnets.append(cfg)
 
     acc_record = []
@@ -329,7 +332,9 @@ def get_subnets(args, config, model, cand_pool:CandidatePool, eps3 = None, eps4 
     
     subnets = []
     for _ in range(num_subnets):
-        cfg = model.module.random_config_fn(weighted_mode = eps3, filter_ratio = eps4, filter_threshold = eps5, confident_num_visit = eps5_v_num)
+        # FIXME: Work around for supernet training
+        # cfg = model.module.random_config_fn(weighted_mode = eps3, filter_ratio = eps4, filter_threshold = eps5, confident_num_visit = eps5_v_num)
+        cfg = model.module.random_config_fn(weighted_mode = eps3)
         subnets.append(cfg)
     
     

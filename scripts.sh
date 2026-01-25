@@ -1,3 +1,11 @@
+## Training supernet without distillation
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch \
+--nproc_per_node 1 --master_port 29501 main.py \
+--cfg configs/supernet/deit_small_vanilla.yaml \
+--data-path /dataset/imagenet \
+--batch-size 32
+
+
 
 # region deit-small
 # Eval deit-small u24 (79.144%)
